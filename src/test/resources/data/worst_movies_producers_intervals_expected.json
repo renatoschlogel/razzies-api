@@ -1,0 +1,36 @@
+{
+  "min": [
+    {
+      "producer": "Lorenzo di Bonaventura",
+      "interval": 2,
+      "previousWin": 2009,
+      "followingWin": 2011
+    },
+    {
+      "producer": "Ian Bryce",
+      "interval": 2,
+      "previousWin": 2009,
+      "followingWin": 2011
+    },
+    {
+      "producer": "Tom DeSanto",
+      "interval": 2,
+      "previousWin": 2009,
+      "followingWin": 2011
+    },
+    {
+      "producer": "Don Murphy",
+      "interval": 2,
+      "previousWin": 2009,
+      "followingWin": 2011
+    }
+  ],
+  "max": [
+    {
+      "producer": "Buzz Feitshans",
+      "interval": 9,
+      "previousWin": 1985,
+      "followingWin": 1994
+    }
+  ]
+}
