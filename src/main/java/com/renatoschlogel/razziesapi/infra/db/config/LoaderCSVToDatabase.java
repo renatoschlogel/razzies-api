@@ -1,13 +1,16 @@
-package com.renatoschlogel.razziesapi.config;
+package com.renatoschlogel.razziesapi.infra.db.config;
 
 import com.renatoschlogel.razziesapi.infra.db.entities.MovieEntity;
 import com.renatoschlogel.razziesapi.infra.db.repositories.MovieRepository;
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -16,10 +19,14 @@ import java.util.List;
 
 @Log4j2
 @Configuration
+@RequiredArgsConstructor
 public class LoaderCSVToDatabase {
 
-    private static final String CSV_FILE_PATH = "/data/movielist.csv";
     private static final String CSV_DELIMITER = ";";
+    private final ResourceLoader resourceLoader;
+
+    @Value("${app.data.csv-path-movies-import}")
+    private String csvFilePath;
 
     @Bean
     @Transactional
@@ -31,11 +38,11 @@ public class LoaderCSVToDatabase {
                 return;
             }
 
-            log.info("Populating database from CSV file: {}", CSV_FILE_PATH);
+            log.info("*** Populating database from CSV file: {}", csvFilePath);
             List<MovieEntity> moviesToSave = new ArrayList<>();
+            Resource resource = resourceLoader.getResource(csvFilePath);
 
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(new ClassPathResource(CSV_FILE_PATH).getInputStream()))) {
-
+            try (BufferedReader reader = new BufferedReader(new InputStreamReader(resource.getInputStream()))) {
                 reader.lines().skip(1).forEach(line -> {
                     String[] fields = line.split(CSV_DELIMITER, -1);
                     if (fields.length >= 5) {
@@ -54,7 +61,7 @@ public class LoaderCSVToDatabase {
                 });
 
                 movieRepository.saveAll(moviesToSave);
-                log.info("Successfully loaded {} movies into the database.", moviesToSave.size());
+                log.info("*** Successfully loaded {} movies into the database.", moviesToSave.size());
 
             } catch (Exception e) {
                 log.error("Failed to initialize database with CSV.", e);

@@ -13,9 +13,13 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
   h2:
     console:
       enabled: true
       path: /h2-console
-      
+app:
+  data:
+    csv-path-movies-import: "classpath:data/movielist.csv"
+test:
+  data:
+    expected-json-path: "classpath:data/worst_movies_producers_intervals_expected.json"
