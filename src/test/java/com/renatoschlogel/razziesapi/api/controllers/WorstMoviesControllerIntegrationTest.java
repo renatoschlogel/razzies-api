@@ -1,7 +1,6 @@
 package com.renatoschlogel.razziesapi.api.controllers;
 
 import com.renatoschlogel.razziesapi.RazziesApiApplication;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +34,6 @@ class WorstMoviesControllerIntegrationTest {
 
     @Test
     @DisplayName("Should return producers with min and max award intervals for worst movies in the specified format")
-    @Disabled
     void producersAwardsIntervals_shouldReturnExpectedJson() throws Exception {
         String expectedJson = loadJsonFromFile(EXPECTED_JSON_PATH);
 
