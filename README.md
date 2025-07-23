@@ -1,6 +1,6 @@
 # Razzies API
 
-A RESTful API developed in Spring Boot to identify producers with the shortest and longest intervals between consecutive "Worst Picture" wins at the "Golden Raspberry Awards" (Razzie Awards) Category.
+A RESTful API developed in Spring Boot to identify producers with the shortest and longest intervals between consecutive Worst Picture wins at the Golden Raspberry Awards (Razzie Awards) Category.
 
 ---
 
@@ -14,7 +14,7 @@ This project implements an API to analyze historical data from the Golden Raspbe
 
 ---
 
-## 🚀 Key Technologies
+## Key Technologies
 
 * **Java 21+**: Programming language.
 * **Spring Boot 3.x**: Main framework for API construction.
@@ -27,7 +27,7 @@ This project implements an API to analyze historical data from the Golden Raspbe
 
 ---
 
-## 🏛️ Architecture and Design Decisions (Clean Architecture)
+## Architecture and Design Decisions (Clean Architecture)
 
 The project is structured into distinct layers to ensure separation of concerns and the independence of business logic from frameworks or infrastructure details.
 
@@ -49,7 +49,7 @@ The project is structured into distinct layers to ensure separation of concerns 
 
 ---
 
-## ⚙️ Data Flow and Business Logic
+## Data Flow and Business Logic
 
 The complete flow for obtaining producer award intervals follows these steps:
 
@@ -80,7 +80,7 @@ The complete flow for obtaining producer award intervals follows these steps:
 
 ---
 
-## 💡 API Endpoints
+## API Endpoints
 
 ### `GET /api/v1/worst-movies/producers-intervals`
 
@@ -112,7 +112,7 @@ Returns a list of producers with the shortest and longest intervals between two 
     }
     ```
 
-### 📄 Interactive API Documentation (Swagger UI)
+### Interactive API Documentation (Swagger UI)
 
 The API is documented using **Springdoc OpenAPI**.
 
@@ -120,7 +120,7 @@ The API is documented using **Springdoc OpenAPI**.
 
 ---
 
-## 🚀 How to Run the Application
+## How to Run the Application
 
 1.  **Prerequisites**:
     * Java Development Kit (JDK) 21 or higher.
@@ -169,7 +169,7 @@ You can configure the CSV import file path via the `app.data.csv-path-movies-imp
 
 ---
 
-## 🧪 Tests and Validation
+## Tests and Validation
 
 Application quality is ensured by the integration test, `WorstMoviesControllerIntegrationTest`, which validates the complete API flow.
 
