@@ -14,7 +14,7 @@ Este projeto implementa uma API para analisar dados históricos dos Golden Raspb
 
 ---
 
-## 🚀 Tecnologias Principais
+## Tecnologias Principais
 
 * **Java 21+**: Linguagem de programação.
 * **Spring Boot 3.x**: Framework principal para construção da API.
