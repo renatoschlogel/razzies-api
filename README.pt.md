@@ -1,6 +1,6 @@
 # Razzies API
 
-Uma API RESTful desenvolvida em Spring Boot para identificar os produtores com o menor e o maior intervalo entre vitórias consecutivas no "Golden Raspberry Awards" (Razzie Awards) Cateoria de "Pior Filme".
+Uma API RESTful desenvolvida em Spring Boot para identificar os produtores com o menor e o maior intervalo entre vitórias consecutivas no Golden Raspberry Awards (Razzie Awards) Cateoria de Pior Filme.
 
 ---
 
@@ -10,7 +10,7 @@ Uma API RESTful desenvolvida em Spring Boot para identificar os produtores com o
 
 ## Visão Geral
 
-Este projeto implementa uma API para analisar dados históricos dos Golden Raspberry Awards (conhecidos como Razzies). O objetivo principal é identificar e expor os produtores que ganharam o prêmio de "Pior Filme" com os menores e maiores intervalos de tempo entre suas vitórias consecutivas.
+Este projeto implementa uma API para analisar dados históricos dos Golden Raspberry Awards (conhecidos como Razzies). O objetivo principal é identificar e expor os produtores que ganharam o prêmio de Pior Filme com os menores e maiores intervalos de tempo entre suas vitórias consecutivas.
 
 ---
 
@@ -27,7 +27,7 @@ Este projeto implementa uma API para analisar dados históricos dos Golden Raspb
 
 ---
 
-## 🏛️ Arquitetura e Decisões de Design (Clean Architecture)
+## Arquitetura e Decisões de Design (Clean Architecture)
 
 O projeto é estruturado em camadas distintas para garantir a separação de interesses e a independência da lógica de negócio em relação a frameworks ou detalhes de infraestrutura.
 
@@ -49,7 +49,7 @@ O projeto é estruturado em camadas distintas para garantir a separação de int
 
 ---
 
-## ⚙️ Fluxo de Dados e Lógica de Negócio
+## Fluxo de Dados e Lógica de Negócio
 
 O fluxo completo para a obtenção dos intervalos de produtores segue estes passos:
 
@@ -80,7 +80,7 @@ O fluxo completo para a obtenção dos intervalos de produtores segue estes pass
 
 ---
 
-## 💡 Endpoints da API
+## Endpoints da API
 
 ### `GET /api/v1/worst-movies/producers-intervals`
 
@@ -112,7 +112,7 @@ Retorna uma lista de produtores com o menor e o maior intervalo entre duas vitó
     }
     ```
 
-### 📄 Documentação Interativa da API (Swagger UI)
+### Documentação Interativa da API (Swagger UI)
 
 A API é documentada usando **Springdoc OpenAPI**
 
@@ -120,7 +120,7 @@ A API é documentada usando **Springdoc OpenAPI**
 
 ---
 
-## 🚀 Como Rodar a Aplicação
+## Como Rodar a Aplicação
 
 1.  **Pré-requisitos**:
     * Java Development Kit (JDK) 21 ou superior.
@@ -169,7 +169,7 @@ Você pode configurar o caminho do arquivo CSV de importação através da propr
 
 ---
 
-## 🧪 Testes e Validação
+## Testes e Validação
 
 A qualidade da aplicação é garantida pelo teste de integração, `WorstMoviesControllerIntegrationTest`, que valida o fluxo completo da API.
 
